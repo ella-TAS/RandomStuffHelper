@@ -1,0 +1,20 @@
+{
+    "Log with Logger": {
+        "scope": "csharp",
+        "prefix": "log",
+        "body": "Logger.Log(\"RandomStuffHelper\", $0);",
+        "description": "Log output to console"
+    },
+    "Player from Tracker": {
+        "scope": "csharp",
+        "prefix": "player",
+        "body": "Player p = SceneAs<Level>().Tracker.GetEntity<Player>();",
+        "description": "get Player from Tracker"
+    },
+    "Scene as Level": {
+        "scope": "csharp",
+        "prefix": "scene",
+        "body": "SceneAs<Level>()",
+        "description": "get Scene"
+    }
+}

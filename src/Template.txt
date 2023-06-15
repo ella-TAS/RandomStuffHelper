@@ -1,0 +1,12 @@
+using Monocle;
+using Microsoft.Xna.Framework;
+using Celeste.Mod.Entities;
+
+namespace Celeste.Mod.GameHelper.Entities;
+
+[CustomEntity("GameHelper/Template")]
+public class Template : Entity {
+    public Template(EntityData data, Vector2 levelOffset) : base(data.Position + levelOffset) {
+
+    }
+}
