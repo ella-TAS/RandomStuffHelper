@@ -2,7 +2,6 @@
 
 namespace Celeste.Mod.RandomStuffHelper {
     public class RandomStuffHelperModule : EverestModule {
-        
         public static RandomStuffHelperModule Instance;
 
         public RandomStuffHelperModule() {
@@ -14,6 +13,5 @@ namespace Celeste.Mod.RandomStuffHelper {
 
         public override void Unload() {
         }
-
     }
 }
