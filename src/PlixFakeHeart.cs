@@ -17,7 +17,7 @@ public class PlixFakeHeart : HeartGem {
         Logger.Log("RandomStuffHelper", "hi");
         IsFake = IsGhost = false;
         ddata = new(this);
-        poemID = data.Attr("poem");
+        poemID = data.Attr("poem", "RWC2023_Plixona_heartpoem");
     }
 
     public new void OnHoldable(Holdable h) {
