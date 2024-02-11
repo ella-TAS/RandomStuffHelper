@@ -3,7 +3,7 @@
     "tasks": [
         {
             "label": "build",
-            "command": "dotnet build src -o bin",
+            "command": "dotnet build src",
             "type": "shell",
             "group": {
                 "kind": "build",
@@ -16,7 +16,7 @@
         },
         {
             "label": "release build",
-            "command": "dotnet build src -o bin -c Release;rm bin/RandomStuffHelper.pdb",
+            "command": "dotnet build src -c Release;rm bin/RandomStuffHelper.pdb",
             "type": "shell",
             "group": {
                 "kind": "build",

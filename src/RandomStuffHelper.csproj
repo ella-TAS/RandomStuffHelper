@@ -6,12 +6,15 @@
         <RootNamespace>Celeste.Mod.RandomStuffHelper</RootNamespace>
         <LangVersion>latest</LangVersion>
         <CelesteGamePath Condition="'$(CELESTEGAMEPATH)' == ''">..\..\..</CelesteGamePath>
-        <PathMap>$(MSBuildProjectDirectory)=X:\GameHelper\</PathMap>
+        <PathMap>$(MSBuildProjectDirectory)=X:\RandomStuffHelper\</PathMap>
         <ResolveAssemblyWarnOrErrorOnTargetArchitectureMismatch>None</ResolveAssemblyWarnOrErrorOnTargetArchitectureMismatch>
+        <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+        <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
+        <OutputPath>..\bin</OutputPath>
     </PropertyGroup>
 
     <PropertyGroup>
-        <NoWarn>IDE1006;IDE0220;RCS1194</NoWarn>
+        <NoWarn>IDE0028;IDE0180;IDE0220;IDE0290;IDE0300;IDE1006;RCS1194</NoWarn>
     </PropertyGroup>
 
     <!--Disable
@@ -27,9 +30,10 @@
     </ItemGroup>
 
     <ItemGroup>
-        <Reference Include="Celeste" HintPath="$(CELESTEGAMEPATH)\Celeste.exe" />
-        <Reference Include="MMHOOK_Celeste" HintPath="$(CELESTEGAMEPATH)\MMHOOK_Celeste.dll" />
-        <Reference Include="YamlDotNet" HintPath="$(CELESTEGAMEPATH)\YamlDotNet.dll" />
+        <Reference Include="Celeste" HintPath="$(CELESTEGAMEPATH)\legacyRef\Celeste.exe" />
+        <Reference Include="MMHOOK_Celeste"
+            HintPath="$(CELESTEGAMEPATH)\legacyRef\MMHOOK_Celeste.dll" />
+        <Reference Include="YamlDotNet" HintPath="$(CELESTEGAMEPATH)\legacyRef\YamlDotNet.dll" />
     </ItemGroup>
 
     <Choose>

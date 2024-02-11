@@ -1,17 +1,17 @@
 ﻿using System;
 
-namespace Celeste.Mod.RandomStuffHelper {
-    public class RandomStuffHelperModule : EverestModule {
-        public static RandomStuffHelperModule Instance;
+namespace Celeste.Mod.RandomStuffHelper;
 
-        public RandomStuffHelperModule() {
-            Instance = this;
-        }
+public class RandomStuffHelperModule : EverestModule {
+    public static RandomStuffHelperModule Instance;
 
-        public override void Load() {
-        }
+    public RandomStuffHelperModule() {
+        Instance = this;
+    }
 
-        public override void Unload() {
-        }
+    public override void Load() {
+    }
+
+    public override void Unload() {
     }
 }
