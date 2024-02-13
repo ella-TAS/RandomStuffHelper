@@ -34,6 +34,8 @@
         <Reference Include="MMHOOK_Celeste"
             HintPath="$(CELESTEGAMEPATH)\legacyRef\MMHOOK_Celeste.dll" />
         <Reference Include="YamlDotNet" HintPath="$(CELESTEGAMEPATH)\legacyRef\YamlDotNet.dll" />
+        <Reference Include="GameHelper"
+            HintPath="$(CELESTEGAMEPATH)\Mods\Cache\GameHelper.GameHelper.dll" />
     </ItemGroup>
 
     <Choose>
