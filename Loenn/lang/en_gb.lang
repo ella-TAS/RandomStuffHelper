@@ -1,3 +1,4 @@
 entities.RandomStuffHelper/PlixFakeHeart.placements.name.normal=Plix Fake Heart
 entities.RandomStuffHelper/WingBerryBarrier.placements.name.barrier=Wing Berry Barrier
+entities.RandomStuffHelper/DashBumper.placements.name.normal=Dash Bumper
 triggers.RandomStuffHelper/CameraEntityTargetTrigger.placements.name.normal=Camera Entity Target
