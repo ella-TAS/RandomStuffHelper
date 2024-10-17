@@ -14,7 +14,6 @@ public class PlixFakeHeart : HeartGem {
     private readonly string poemID;
 
     public PlixFakeHeart(EntityData data, Vector2 levelOffset) : base(data.Position + levelOffset) {
-        Logger.Log("RandomStuffHelper", "hi");
         IsFake = IsGhost = false;
         ddata = new(this);
         poemID = data.Attr("poem", "RWC2023_Plixona_heartpoem");
