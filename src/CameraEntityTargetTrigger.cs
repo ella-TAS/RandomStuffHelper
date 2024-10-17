@@ -1,7 +1,6 @@
 using Celeste.Mod.Entities;
 using Celeste.Mod.GameHelper.Entities.Wrappers;
 using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
 using Monocle;
 
 namespace Celeste.Mod.RandomStuffHelper.Triggers;

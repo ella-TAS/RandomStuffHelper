@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
-        <TargetFrameworks>net452</TargetFrameworks>
+        <TargetFrameworks>net70</TargetFrameworks>
         <AssemblyName>RandomStuffHelper</AssemblyName>
         <RootNamespace>Celeste.Mod.RandomStuffHelper</RootNamespace>
         <LangVersion>latest</LangVersion>
-        <CelesteGamePath Condition="'$(CELESTEGAMEPATH)' == ''">..\..\..</CelesteGamePath>
+        <CelesteGamePath Condition="'$(CELESTEGAMEPATH)' == '' And Exists('..\..\..\Celeste.dll')">..\..\..</CelesteGamePath>
+        <CelesteGamePath Condition="'$(CELESTEGAMEPATH)' == ''">..\lib</CelesteGamePath>
         <PathMap>$(MSBuildProjectDirectory)=X:\RandomStuffHelper\</PathMap>
-        <ResolveAssemblyWarnOrErrorOnTargetArchitectureMismatch>None</ResolveAssemblyWarnOrErrorOnTargetArchitectureMismatch>
         <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
         <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
         <OutputPath>..\bin</OutputPath>
@@ -17,43 +17,24 @@
         <NoWarn>IDE0028;IDE0180;IDE0220;IDE0290;IDE0300;IDE1006;RCS1194</NoWarn>
     </PropertyGroup>
 
-    <!--Disable
-    "Copy Local" for all references-->
+    <!--Disable "Copy Local" for all references-->
     <ItemDefinitionGroup>
         <PackageReference PrivateAssets="all" ExcludeAssets="runtime" />
         <Reference Private="false" />
     </ItemDefinitionGroup>
 
     <ItemGroup>
-        <PackageReference Include="MonoMod" Version="22.01.04.03" />
-        <PackageReference Include="MonoMod.RuntimeDetour" Version="22.01.04.03" />
+        <PackageReference Include="MonoMod.RuntimeDetour" Version="25.0.2" />
+        <PackageReference Include="MonoMod.Patcher" Version="25.0.0-prerelease.2" />
+        <PackageReference Include="CelesteAnalyzer" Version="*" />
+        <PackageReference Include="CelesteMod.Publicizer" Version="*" CelesteAssembly="$(CELESTEGAMEPATH)\Celeste.dll" />
     </ItemGroup>
 
     <ItemGroup>
-        <Reference Include="Celeste" HintPath="$(CELESTEGAMEPATH)\legacyRef\Celeste.exe" />
-        <Reference Include="MMHOOK_Celeste"
-            HintPath="$(CELESTEGAMEPATH)\legacyRef\MMHOOK_Celeste.dll" />
-        <Reference Include="YamlDotNet" HintPath="$(CELESTEGAMEPATH)\legacyRef\YamlDotNet.dll" />
-        <Reference Include="GameHelper"
-            HintPath="$(CELESTEGAMEPATH)\Mods\Cache\GameHelper.GameHelper.dll" />
+        <Reference Include="Celeste" HintPath="$(CELESTEGAMEPATH)\Celeste.dll" />
+        <Reference Include="MMHOOK_Celeste" HintPath="$(CELESTEGAMEPATH)\MMHOOK_Celeste.dll" />
+        <Reference Include="YamlDotNet" HintPath="$(CELESTEGAMEPATH)\YamlDotNet.dll" />
+        <Reference Include="FNA" HintPath="$(CELESTEGAMEPATH)\FNA.dll" />
+        <Reference Include="GameHelper" HintPath="$(CELESTEGAMEPATH)\Mods\Cache\GameHelper.GameHelper.dll" />
     </ItemGroup>
-
-    <Choose>
-        <When Condition="'$(OS)' != 'Windows_NT' Or Exists('$(CELESTEGAMEPATH)\FNA.dll')">
-            <ItemGroup>
-                <Reference Include="FNA" HintPath="$(CELESTEGAMEPATH)\FNA.dll" />
-            </ItemGroup>
-        </When>
-
-        <Otherwise>
-            <ItemGroup>
-                <Reference Include="Microsoft.Xna.Framework"
-                    HintPath="$(WINDIR)\Microsoft.NET\assembly\GAC_32\Microsoft.Xna.Framework\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.dll" />
-                <Reference Include="Microsoft.Xna.Framework.Game"
-                    HintPath="$(WINDIR)\Microsoft.NET\assembly\GAC_32\Microsoft.Xna.Framework.Game\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Game.dll" />
-                <Reference Include="Microsoft.Xna.Framework.Graphics"
-                    HintPath="$(WINDIR)\Microsoft.NET\assembly\GAC_32\Microsoft.Xna.Framework.Graphics\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Graphics.dll" />
-            </ItemGroup>
-        </Otherwise>
-    </Choose>
 </Project>

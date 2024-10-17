@@ -1,5 +1,4 @@
 ﻿using Celeste.Mod.RandomStuffHelper.Entities;
-using System;
 
 namespace Celeste.Mod.RandomStuffHelper;
 
