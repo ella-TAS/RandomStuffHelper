@@ -24,7 +24,7 @@
     </ItemDefinitionGroup>
 
     <ItemGroup>
-        <PackageReference Include="MonoMod.RuntimeDetour" Version="25.0.2" />
+        <PackageReference Include="MonoMod.RuntimeDetour" Version="25.2.3" />
         <PackageReference Include="MonoMod.Patcher" Version="25.0.0-prerelease.2" />
         <PackageReference Include="CelesteAnalyzer" Version="*" />
         <PackageReference Include="CelesteMod.Publicizer" Version="*" CelesteAssembly="$(CELESTEGAMEPATH)\Celeste.dll" />

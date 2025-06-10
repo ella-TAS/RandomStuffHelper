@@ -2,7 +2,7 @@ using Celeste.Mod.Entities;
 using Monocle;
 using Microsoft.Xna.Framework;
 
-namespace Celeste.Mod.RandomStuffHelper.Entities;
+namespace Celeste.Mod.RandomStuffHelper;
 
 [CustomEntity("RandomStuffHelper/DashBumper")]
 public class DashBumper : Bumper {

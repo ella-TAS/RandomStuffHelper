@@ -1,9 +1,9 @@
 using Celeste.Mod.Entities;
-using Celeste.Mod.GameHelper.Entities.Wrappers;
+using Celeste.Mod.GameHelper.Utils;
 using Microsoft.Xna.Framework;
 using Monocle;
 
-namespace Celeste.Mod.RandomStuffHelper.Triggers;
+namespace Celeste.Mod.RandomStuffHelper;
 
 [CustomEntity("RandomStuffHelper/CameraEntityTargetTrigger")]
 public class CameraEntityTargetTrigger : Wrapper {

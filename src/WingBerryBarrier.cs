@@ -2,7 +2,7 @@ using Microsoft.Xna.Framework;
 using Celeste.Mod.Entities;
 using Monocle;
 
-namespace Celeste.Mod.RandomStuffHelper.Entities;
+namespace Celeste.Mod.RandomStuffHelper;
 
 [CustomEntity("RandomStuffHelper/WingBerryBarrier")]
 public class WingBerryBarrier : SeekerBarrier {

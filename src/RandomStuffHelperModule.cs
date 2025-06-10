@@ -1,6 +1,4 @@
-﻿using Celeste.Mod.RandomStuffHelper.Entities;
-
-namespace Celeste.Mod.RandomStuffHelper;
+﻿namespace Celeste.Mod.RandomStuffHelper;
 
 public class RandomStuffHelperModule : EverestModule {
     public static RandomStuffHelperModule Instance;

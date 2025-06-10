@@ -3,7 +3,7 @@ using Microsoft.Xna.Framework;
 using Celeste.Mod.Entities;
 using System.Collections;
 
-namespace Celeste.Mod.RandomStuffHelper.Entities;
+namespace Celeste.Mod.RandomStuffHelper;
 
 [CustomEntity("RandomStuffHelper/PlixFakeHeart")]
 public class PlixFakeHeart : HeartGem {
