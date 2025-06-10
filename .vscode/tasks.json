@@ -16,7 +16,7 @@
         },
         {
             "label": "release build",
-            "command": "rm *.zip;rm bin/*;dotnet build src -c Release;rm bin/*.pdb;rm bin/*.json",
+            "command": "rm *.zip;rm bin/*;dotnet build src -c Release;rm bin/*.json",
             "type": "shell",
             "group": {
                 "kind": "build",
